@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assignment_28012022_Pages/loan.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Loan Calculator</h1>
+    </header>
+    <main>
+        <form name="loanApplication" >
+            <label for="Applicant name">Applicant Name</label>
+            <input type="text" required><br>
+
+            <label for="Loan Amount">Loan Amount</label>
+            <input type="text" name="principle" required><br>
+
+            <label for="Loan type">Loan Type</label>
+            <select name="LoanType" onmouseout="decideDurationAndROI(this.value)" required>
+                <option value="Home">Home Loan</option>
+                <option value="Car">Car Loan</option>
+                <option value="Personal">Personal Loan</option>
+            </select><br>
+
+            <label for="Duration">Duration</label>
+            <input type="number" name="duration" ><br>
+
+            <label for="ROI">Rate Of Intrest</label>
+            <input type="text" name="roi" disabled><br>
+
+            <label for="Duration">EMI</label>
+            <input type="text" name="emi" disabled><br>
+
+            <input type="submit" value="Calculate" name="calculate" onclick="calculateEMI()" disabled=true>
+            <input type="reset" value="reset">
+        </form>
+    </main>
+    <script src="../assignment_28012022_Pages/loanscript.js"></script>
+</body>
+</html>

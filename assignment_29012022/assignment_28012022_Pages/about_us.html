@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./loan.css">
+    <title>Document</title>
+    <script src="./loanscript.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Account Opening</h1>
+    </header>
+    <main>
+        <form name="accountOpening" >
+            <label for="customer name">Customer Name</label>
+            <input type="text" required name="cname"><br>
+
+            <label for="Customer Age">Customer Age</label>
+            <input type="text" name="cage" required><br>
+
+            <label for="Account type">Account type</label>
+            <select name="accType" required>
+                <option value="Savings">Savings</option>
+                <option value="Current">Current</option>
+            </select><br>
+
+            <label for="branch name">Branch Name</label>
+            <input type="text" name="bname" ><br>
+
+            <label for="mobile number">Mobile Number</label>
+            <input type="text" name="mno"><br>
+
+            <input type="button" value="Apply" name="calculate" onclick="saveCustomerInformation()" >
+            <input type="button" value="Display name" name="dispname" onclick="displayNamesWithAccountType()" >
+            <input type="button" value="Display All" name="dispall" onclick="dispalyAllCustomer()" >
+            <input type="button" value="Remove" onclick=remove()>
+        </form>
+    </main>
+    <section id="display">
+    </section>
+    <section id="removeform">
+    </section>
+</body>
+</html>
